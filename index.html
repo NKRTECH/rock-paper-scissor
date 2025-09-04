@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        
+        <div class="score-board">
+            <div class="score-box">
+                <h3>Player</h3>
+                <p id="player-score">0</p>
+            </div>
+            <div class="round-counter">
+                <p>Round: <span id="round">0</span>/5</p>
+            </div>
+            <div class="score-box">
+                <h3>Computer</h3>
+                <p id="computer-score">0</p>
+            </div>
+        </div>
+
+        <div class="choices">
+            <button class="choice" data-choice="rock">
+                <span>✊</span>
+                <p>Rock</p>
+            </button>
+            <button class="choice" data-choice="paper">
+                <span>✋</span>
+                <p>Paper</p>
+            </button>
+            <button class="choice" data-choice="scissors">
+                <span>✌️</span>
+                <p>Scissors</p>
+            </button>
+        </div>
+
+        <div class="game-status">
+            <p id="result-message">Choose your move to start the game!</p>
+            <div class="moves">
+                <div class="move">
+                    <p>You</p>
+                    <div id="player-move" class="move-icon">❔</div>
+                </div>
+                <div class="vs">vs</div>
+                <div class="move">
+                    <p>Computer</p>
+                    <div id="computer-move" class="move-icon">❔</div>
+                </div>
+            </div>
+        </div>
+
+        <button id="reset-btn" class="reset-btn">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
