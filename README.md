@@ -52,7 +52,7 @@ A modern and interactive Rock Paper Scissors game built with HTML, CSS, and Java
 - **R**: Restart game
 - **M**: Toggle sound
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5** for structure
 - **CSS3** for styling (with Flexbox and animations)
@@ -60,7 +60,7 @@ A modern and interactive Rock Paper Scissors game built with HTML, CSS, and Java
 - **Web Audio API** for sound effects
 - **CSS Animations** for smooth transitions
 
-## 📱 Responsive Design
+## Responsive Design
 
 The game is fully responsive and works on:
 - Desktop computers

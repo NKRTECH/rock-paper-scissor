@@ -1,3 +1,12 @@
+// Sound configuration
+const SOUND_CONFIG = {
+    click: 'assets/sounds/click.mp3',
+    win: 'assets/sounds/win.mp3',
+    lose: 'assets/sounds/lose.mp3',
+    draw: 'assets/sounds/draw.mp3',
+    gameOver: 'assets/sounds/game-over.mp3'
+};
+
 // Game state
 const gameState = {
     playerScore: 0,
@@ -5,13 +14,6 @@ const gameState = {
     round: 0,
     maxRounds: 5,
     gameOver: false,
-    sounds: {
-        click: new Audio('https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3'),
-        win: new Audio('https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3'),
-        lose: new Audio('https://assets.mixkit.co/sfx/preview/mixkit-losing-bleeps-2026.mp3'),
-        draw: new Audio('https://assets.mixkit.co/sfx/preview/mixkit-neutral-game-notification-943.mp3'),
-        gameOver: new Audio('https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-over-2134.mp3')
-    },
     isAudioEnabled: true
 };
 
@@ -371,6 +373,15 @@ confettiStyles.textContent = `
     }
 `;
 document.head.appendChild(confettiStyles);
+
+// Sound functions
+function playSound(soundName) {
+    if (!gameState.isAudioEnabled) return;
+    
+    const audio = new Audio(SOUND_CONFIG[soundName]);
+    audio.volume = 0.5;
+    audio.play().catch(e => console.log('Audio play failed:', e));
+}
 
 // Initialize game when DOM is loaded
 document.addEventListener('DOMContentLoaded', initGame);
